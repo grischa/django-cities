@@ -1,13 +1,14 @@
 from random import choice
 from string import ascii_uppercase, digits
 
+from six import python_2_unicode_compatible
+
 try:
     from django.utils.encoding import force_unicode as force_text
 except (NameError, ImportError):
     from django.utils.encoding import force_text
 
 from django.db import transaction
-from django.utils.encoding import python_2_unicode_compatible
 from django.contrib.gis.db.models import PointField
 from django.db import models
 from django.contrib.gis.geos import Point
